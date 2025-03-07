@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for,jsonify
+from flask import Flask, render_template, url_for,jsonify, redirect,request
 import plotly.express as px
 import plotly.io as pio
 import json
@@ -7,6 +7,7 @@ app = Flask(__name__, static_folder='static',  template_folder='templates')
 
 @app.route('/', methods=['GET', 'POST'])
 def signup():
+
     return render_template('signup.html')
 
 @app.route('/login')
